@@ -19,7 +19,7 @@ services:
       - "rdmariadb"
 
     ports:
-      - '80:80'
+      - '2080:80'
       - "1812:1812/udp"
       - "1813:1813/udp"
 
@@ -33,6 +33,9 @@ services:
       - "MARIADB_USER=rd"
       - "MARIADB_DATABASE=rd"
       - "MARDIADB_PASSWORD=rd"
+    
+    ports:
+      - '3080:3306'
    
     volumes:
       - ${RADIUSDESK_VOLUME}/db_conf/my_custom.cnf:/opt/bitnami/mariadb/conf/my_custom.cnf:ro
