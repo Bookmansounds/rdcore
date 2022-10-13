@@ -20,8 +20,8 @@ services:
 
     ports:
       - '2080:80'
-      - "1812:1812/udp"
-      - "1813:1813/udp"
+      - "3812:1812/udp"
+      - "3813:1813/udp"
 
   rdmariadb:
     container_name: radiusdesk-mariadb
@@ -33,7 +33,7 @@ services:
       - "MARIADB_USER=rd"
       - "MARIADB_DATABASE=rd"
       - "MARDIADB_PASSWORD=rd"
-    
+
     ports:
       - '3080:3306'
    
